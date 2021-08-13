@@ -1,1 +1,79 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
 
+
+                                                           /* SOLUTION */
+                                                           /*  START  */
+
+
+class Student{
+    public:
+    //first name
+    string first_name;
+    void set_first_name(string nm){
+        first_name = nm;
+    }
+    string get_first_name(){
+       return first_name;
+    }
+    //last name
+    string last_name;
+    void set_last_name(string nm){
+        last_name = nm;
+    }
+    string get_last_name(){
+        return last_name;
+    }
+    
+    //standard
+    int standard;
+    void set_standard(int stn){
+        standard = stn;
+    }
+    
+    int get_standard(){
+        return standard;
+        
+    }
+    
+    
+    //age
+    int age;
+    void set_age(int ag){
+        age = ag;
+    }
+     int get_age(){
+         return age;
+    }
+    ostringstream oss{};
+    string to_string(){
+        oss<<age<<","<<first_name<<","<<last_name<<","<<standard<<endl;
+        
+    return oss.str();
+    
+    }
+                                                                   /* END */
+    
+};
+int main() {
+                                                                //Default code
+    int age, standard;
+    string first_name, last_name;
+    
+    cin >> age >> first_name >> last_name >> standard;
+    
+    Student st;
+    st.set_age(age);                  //age
+    st.set_standard(standard);        //standard
+    st.set_first_name(first_name);    //first name
+    st.set_last_name(last_name);      //last name
+    
+    cout << st.get_age() << "\n";
+    cout << st.get_last_name() << ", " << st.get_first_name() << "\n";
+    cout << st.get_standard() << "\n";
+    cout << "\n";
+    cout << st.to_string();
+    
+    return 0;
+}
