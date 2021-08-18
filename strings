@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string s1,s2;
+    cin>>s1>>s2;
+    cout<<s1.size()<<" "<<s2.size()<<endl;     
+    cout<<s1+s2<<endl;
+    cout<<s2.substr(0,1)+s1.substr(1,s1.size()-1)<<" "<<s1.substr(0,1)+s2.substr(1,s2.size()-1)<<endl;
+    
+    //s2.substr(0,1)- takes first element of the second string
+    //s1.substr(1,s1.size()-1) - takes every element of the first string except the first one-we do size-1 as we want all the numbers which start from index-1 to last element.
+ // same for the next string.\\
+    return 0;
+}
